@@ -1,0 +1,28 @@
+index:
+  is_secure:  on
+  credentials: [[ 1, 2]]
+
+edit:
+  is_secure:  on
+  credentials: [[ 1, 2]]
+
+new:
+  is_secure:  on
+  credentials: [[ 1, 2]]
+
+alquilarPeliculas:
+  is_secure:  on
+  credentials: [[ 1, 2]]
+
+borrarReservas:
+  is_secure:  on  
+
+peliculasReservadas:
+  is_secure:  on
+  credentials: [[ 1, 2]]
+
+reservarPelicula:
+  is_secure:  on  
+
+reservadas:
+  is_secure:  on

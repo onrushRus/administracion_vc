@@ -1,0 +1,85 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  alquiler:
+    _attributes: { phpName: Alquiler, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    fecha_alquiler: { phpName: FechaAlquiler, type: TIMESTAMP, required: true }
+    fecha_devolucion: { phpName: FechaDevolucion, type: TIMESTAMP, required: false }
+    total_a_cobrar: { phpName: TotalACobrar, type: DECIMAL, scale: '0', required: true }
+    socio_id: { phpName: SocioId, type: INTEGER, required: true, foreignTable: socio, foreignReference: id }
+    _indexes: { fk_alquiler_socio1: [socio_id] }
+  categoria:
+    _attributes: { phpName: Categoria, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    tipo: { phpName: Tipo, type: VARCHAR, size: '20', required: true }
+  comentario:
+    _attributes: { phpName: Comentario, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    socio_id: { phpName: SocioId, type: INTEGER, required: true, foreignTable: socio, foreignReference: id }
+    pelicula_id: { phpName: PeliculaId, type: INTEGER, required: true, foreignTable: pelicula, foreignReference: id }
+    detalle: { phpName: Detalle, type: LONGVARCHAR, required: true }
+    fecha: { phpName: Fecha, type: DATE, required: true }
+    _indexes: { fk_comentario_socio1: [socio_id], fk_comentario_pelicula1: [pelicula_id] }
+  estado_pelicula:
+    _attributes: { phpName: EstadoPelicula, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, required: true }
+    estado: { phpName: Estado, type: VARCHAR, size: '20', required: true }
+  horarios:
+    _attributes: { phpName: Horarios, idMethod: native }
+    LaD_TM_on: { phpName: LadTmOn, type: TIME, required: true }
+    LaD_TM_off: { phpName: LadTmOff, type: TIME, required: true }
+    LaD_TT_on: { phpName: LadTtOn, type: TIME, required: true }
+    LaD_TT_off: { phpName: LadTtOff, type: TIME, required: true }
+  pelicula:
+    _attributes: { phpName: Pelicula, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    titulo: { phpName: Titulo, type: VARCHAR, size: '45', required: true }
+    duracion: { phpName: Duracion, type: TIME, required: true }
+    fecha_estreno: { phpName: FechaEstreno, type: DATE, required: true }
+    estreno: { phpName: Estreno, type: BOOLEAN, size: '1', required: true }
+    actor1_nom: { phpName: Actor1Nom, type: VARCHAR, size: '20', required: false }
+    actor1_apell: { phpName: Actor1Apell, type: VARCHAR, size: '20', required: false }
+    actor2_nom: { phpName: Actor2Nom, type: VARCHAR, size: '20', required: false }
+    actor2_apell: { phpName: Actor2Apell, type: VARCHAR, size: '20', required: false }
+    categoria_id: { phpName: CategoriaId, type: INTEGER, required: true, foreignTable: categoria, foreignReference: id }
+    estado: { phpName: Estado, type: INTEGER, required: true, defaultValue: '1', foreignTable: estado_pelicula, foreignReference: id }
+    sinopsis: { phpName: Sinopsis, type: LONGVARCHAR, required: true }
+    imagen: { phpName: Imagen, type: VARCHAR, size: '50', required: false }
+    _indexes: { fk_pelicula_categoria1: [categoria_id], fk_pelicula_estado_pelicula1: [estado] }
+  reservas:
+    _attributes: { phpName: Reservas, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    socio_id: { phpName: SocioId, type: INTEGER, required: true, foreignTable: socio, foreignReference: id }
+    pelicula_id: { phpName: PeliculaId, type: INTEGER, required: true, foreignTable: pelicula, foreignReference: id }
+    fecha_reserva: { phpName: FechaReserva, type: DATE, required: true }
+    hora_reserva: { phpName: HoraReserva, type: TIME, required: false }
+    expiro_reserva: { phpName: ExpiroReserva, type: BOOLEAN, size: '1', required: false }
+    alquilada: { phpName: Alquilada, type: BOOLEAN, size: '1', required: false }
+    _indexes: { fk_reservas_socio1: [socio_id], fk_reservas_pelicula1: [pelicula_id] }
+  socio:
+    _attributes: { phpName: Socio, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    dni: { phpName: Dni, type: VARCHAR, size: '10', required: true, index: unique }
+    nombre: { phpName: Nombre, type: VARCHAR, size: '20', required: true }
+    apellido: { phpName: Apellido, type: VARCHAR, size: '25', required: true }
+    direccion: { phpName: Direccion, type: VARCHAR, size: '45', required: true }
+    tel_cel: { phpName: TelCel, type: VARCHAR, size: '10', required: false }
+    fecha_nacimiento: { phpName: FechaNacimiento, type: DATE, required: true }
+    usuario: { phpName: Usuario, type: VARCHAR, size: '25', required: true }
+    password: { phpName: Password, type: LONGVARCHAR, required: true }
+    email: { phpName: Email, type: VARCHAR, size: '40', required: true }
+    tipo_socio_id: { phpName: TipoSocioId, type: INTEGER, required: true, defaultValue: '3', foreignTable: tipo_socio, foreignReference: id, onDelete: CASCADE, onUpdate: CASCADE }
+    activo: { phpName: Activo, type: BOOLEAN, size: '1', required: true, defaultValue: true }
+    _indexes: { fk_socio_tipo_socio1: [tipo_socio_id] }
+  socio_alquiler:
+    _attributes: { phpName: SocioAlquiler, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    alquiler_id: { phpName: AlquilerId, type: INTEGER, required: true, foreignTable: alquiler, foreignReference: id }
+    pelicula_id: { phpName: PeliculaId, type: INTEGER, required: true, foreignTable: pelicula, foreignReference: id }
+    _indexes: { fk_socio_alquiler_pelicula1: [pelicula_id], fk_socio_alquiler_alquiler1: [alquiler_id] }
+  tipo_socio:
+    _attributes: { phpName: TipoSocio, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, required: true }
+    tipo_socio: { phpName: TipoSocio, type: VARCHAR, size: '25', required: true }

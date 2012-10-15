@@ -1,0 +1,293 @@
+Oct 11 22:58:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Oct 11 22:58:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 22:58:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 22:58:41 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Oct 11 22:58:41 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1049] Unknown database 'dvd_club']
+Oct 11 22:58:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 11 22:58:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 22:58:41 symfony [info] {sfWebDebugLogger} Configuration 413.62 ms (8)
+Oct 11 22:58:41 symfony [info] {sfWebDebugLogger} Factories 382.61 ms (1)
+Oct 11 22:58:41 symfony [info] {sfWebDebugLogger} Action "home/index" 331.04 ms (1)
+Oct 12 15:07:17 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Oct 12 15:07:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:07:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:07:18 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Oct 12 15:07:18 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:07:18 symfony [debug] {sfPropelLogger} time:  0.031 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT reservas.ID, reservas.SOCIO_ID, reservas.PELICULA_ID, reservas.FECHA_RESERVA, reservas.HORA_RESERVA, reservas.EXPIRO_RESERVA, reservas.ALQUILADA FROM `reservas` WHERE reservas.EXPIRO_RESERVA=0
+Oct 12 15:07:18 symfony [debug] {sfPropelLogger} time:  0.019 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.ESTRENO=1 AND pelicula.CATEGORIA_ID!=8
+Oct 12 15:07:18 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/home/templates/indexSuccess.php"
+Oct 12 15:07:18 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:07:18 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:07:18 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:07:18 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:07:18 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:07:18 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:07:18 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    9.5 MB | mempeak:    9.5 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:07:18 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:07:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:07:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Configuration 100.41 ms (12)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Factories 352.31 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Action "home/index" 331.08 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 241.61 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 11.94 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.74 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 2.44 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 24.13 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 9.62 ms (1)
+Oct 12 15:07:18 symfony [info] {sfWebResponse} Send content (45806 o)
+Oct 12 15:15:24 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Oct 12 15:15:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:15:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:15:25 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Oct 12 15:15:25 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:15:25 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT reservas.ID, reservas.SOCIO_ID, reservas.PELICULA_ID, reservas.FECHA_RESERVA, reservas.HORA_RESERVA, reservas.EXPIRO_RESERVA, reservas.ALQUILADA FROM `reservas` WHERE reservas.EXPIRO_RESERVA=0
+Oct 12 15:15:25 symfony [debug] {sfPropelLogger} time:  0.016 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.ESTRENO=1 AND pelicula.CATEGORIA_ID!=8
+Oct 12 15:15:25 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/home/templates/indexSuccess.php"
+Oct 12 15:15:25 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:15:25 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:15:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:15:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:15:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:15:25 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:15:25 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:15:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:15:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:15:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Configuration 3.89 ms (11)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Factories 309.99 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Action "home/index" 272.34 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 126.66 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 9.37 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.91 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 2.12 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 17.59 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 13.00 ms (1)
+Oct 12 15:15:25 symfony [info] {sfWebResponse} Send content (48471 o)
+Oct 12 15:16:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pelicula/listarPorCategoria/id/1 with parameters array (  'module' => 'pelicula',  'action' => 'listarPorCategoria',  'id' => '1',)
+Oct 12 15:16:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:16:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:16:10 symfony [info] {peliculaActions} Call "peliculaActions->executeListarPorCategoria()"
+Oct 12 15:16:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:16:10 symfony [debug] {sfPropelLogger} time:  0.020 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria` WHERE categoria.ID='1' LIMIT 1
+Oct 12 15:16:10 symfony [debug] {sfPropelLogger} time:  0.015 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `pelicula` WHERE pelicula.CATEGORIA_ID='1'
+Oct 12 15:16:10 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/listarPorCategoriaSuccess.php"
+Oct 12 15:16:10 symfony [debug] {sfPropelLogger} time:  0.086 sec | slow:  NO | mem:    8.5 MB | mempeak:    8.5 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.CATEGORIA_ID='1' GROUP BY pelicula.TITULO ORDER BY pelicula.TITULO ASC LIMIT 10
+Oct 12 15:16:10 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:10 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:10 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:16:10 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:16:10 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:16:10 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:16:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.8 MB | mempeak:    8.8 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:16:10 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:16:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:16:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Configuration 113.72 ms (12)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Factories 66.95 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Action "pelicula/listarPorCategoria" 177.86 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} View "Success" for "pelicula/listarPorCategoria" 165.67 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 1.46 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.50 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 1.67 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 6.46 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 5.86 ms (1)
+Oct 12 15:16:10 symfony [info] {sfWebResponse} Send content (48879 o)
+Oct 12 15:16:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pelicula/listarPorCategoria/id/5 with parameters array (  'module' => 'pelicula',  'action' => 'listarPorCategoria',  'id' => '5',)
+Oct 12 15:16:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:16:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:16:17 symfony [info] {peliculaActions} Call "peliculaActions->executeListarPorCategoria()"
+Oct 12 15:16:17 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:16:17 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria` WHERE categoria.ID='5' LIMIT 1
+Oct 12 15:16:17 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `pelicula` WHERE pelicula.CATEGORIA_ID='5'
+Oct 12 15:16:17 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/listarPorCategoriaSuccess.php"
+Oct 12 15:16:17 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.CATEGORIA_ID='5' GROUP BY pelicula.TITULO ORDER BY pelicula.TITULO ASC LIMIT 10
+Oct 12 15:16:17 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:17 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:17 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:16:17 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:16:17 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:16:17 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:16:17 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:16:17 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:16:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:16:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Configuration 3.08 ms (11)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Factories 63.35 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Action "pelicula/listarPorCategoria" 52.45 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} View "Success" for "pelicula/listarPorCategoria" 30.97 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 0.88 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.59 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 1.09 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 3.35 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 3.57 ms (1)
+Oct 12 15:16:17 symfony [info] {sfWebResponse} Send content (48878 o)
+Oct 12 15:16:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pelicula/listarPorCategoria/id/7 with parameters array (  'module' => 'pelicula',  'action' => 'listarPorCategoria',  'id' => '7',)
+Oct 12 15:16:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:16:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:16:22 symfony [info] {peliculaActions} Call "peliculaActions->executeListarPorCategoria()"
+Oct 12 15:16:22 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:16:22 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria` WHERE categoria.ID='7' LIMIT 1
+Oct 12 15:16:22 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `pelicula` WHERE pelicula.CATEGORIA_ID='7'
+Oct 12 15:16:22 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/listarPorCategoriaSuccess.php"
+Oct 12 15:16:22 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.CATEGORIA_ID='7' GROUP BY pelicula.TITULO ORDER BY pelicula.TITULO ASC LIMIT 10
+Oct 12 15:16:22 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:22 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:22 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:16:22 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:16:22 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:16:22 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:16:22 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:16:22 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:16:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:16:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Configuration 2.88 ms (11)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Factories 63.36 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Action "pelicula/listarPorCategoria" 46.93 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} View "Success" for "pelicula/listarPorCategoria" 28.40 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 0.83 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 0.86 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 0.92 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 3.30 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 3.03 ms (1)
+Oct 12 15:16:22 symfony [info] {sfWebResponse} Send content (48904 o)
+Oct 12 15:16:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pelicula/sinopsis/id/3 with parameters array (  'module' => 'pelicula',  'action' => 'sinopsis',  'id' => '3',)
+Oct 12 15:16:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:16:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:16:25 symfony [info] {peliculaActions} Call "peliculaActions->executeSinopsis()"
+Oct 12 15:16:25 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:16:25 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.CATEGORIA_ID!=8 AND pelicula.ID='3'
+Oct 12 15:16:25 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/sinopsisSuccess.php"
+Oct 12 15:16:25 symfony [notice] {sfWebDebugLogger}  Notice at /home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/sinopsisSuccess.php on line 24 (Use of undefined constant php - assumed 'php')
+Oct 12 15:16:25 symfony [notice] {sfWebDebugLogger}  Notice at /home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/sinopsisSuccess.php on line 28 (Use of undefined constant php - assumed 'php')
+Oct 12 15:16:25 symfony [notice] {sfWebDebugLogger}  Notice at /home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/sinopsisSuccess.php on line 32 (Use of undefined constant php - assumed 'php')
+Oct 12 15:16:25 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:25 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:16:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:16:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:16:25 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:16:25 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.3 MB | mempeak:    8.3 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:16:25 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:16:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:16:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Configuration 2.37 ms (11)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Factories 42.91 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Action "pelicula/sinopsis" 39.72 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} View "Success" for "pelicula/sinopsis" 38.61 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 0.77 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 0.88 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 0.93 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 7.10 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 2.80 ms (1)
+Oct 12 15:16:25 symfony [info] {sfWebResponse} Send content (46979 o)
+Oct 12 15:16:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Oct 12 15:16:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:16:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:16:31 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Oct 12 15:16:32 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:16:32 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT reservas.ID, reservas.SOCIO_ID, reservas.PELICULA_ID, reservas.FECHA_RESERVA, reservas.HORA_RESERVA, reservas.EXPIRO_RESERVA, reservas.ALQUILADA FROM `reservas` WHERE reservas.EXPIRO_RESERVA=0
+Oct 12 15:16:32 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.ESTRENO=1 AND pelicula.CATEGORIA_ID!=8
+Oct 12 15:16:32 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/home/templates/indexSuccess.php"
+Oct 12 15:16:32 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:32 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:32 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:16:32 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:16:32 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:16:32 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:16:32 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:16:32 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:16:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:16:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Configuration 3.13 ms (11)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Factories 62.02 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Action "home/index" 65.36 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 32.02 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 0.82 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.10 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 1.12 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 7.30 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 2.93 ms (1)
+Oct 12 15:16:32 symfony [info] {sfWebResponse} Send content (48587 o)
+Oct 12 15:16:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /home/quienesSomos with parameters array (  'module' => 'home',  'action' => 'quienesSomos',)
+Oct 12 15:16:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:16:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:16:43 symfony [info] {homeActions} Call "homeActions->executeQuienesSomos()"
+Oct 12 15:16:43 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/home/templates/quienesSomosSuccess.php"
+Oct 12 15:16:43 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:43 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:16:43 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:16:43 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:16:43 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:16:43 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:16:43 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:16:43 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:16:43 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:16:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:16:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Configuration 3.30 ms (11)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Factories 63.04 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Action "home/quienesSomos" 0.23 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} View "Success" for "home/quienesSomos" 67.38 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 0.76 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.07 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 1.04 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 34.62 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 3.62 ms (1)
+Oct 12 15:16:43 symfony [info] {sfWebResponse} Send content (43909 o)
+Oct 12 15:21:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Oct 12 15:21:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 12 15:21:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 12 15:21:01 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Oct 12 15:21:01 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 12 15:21:01 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT reservas.ID, reservas.SOCIO_ID, reservas.PELICULA_ID, reservas.FECHA_RESERVA, reservas.HORA_RESERVA, reservas.EXPIRO_RESERVA, reservas.ALQUILADA FROM `reservas` WHERE reservas.EXPIRO_RESERVA=0
+Oct 12 15:21:01 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.ESTRENO=1 AND pelicula.CATEGORIA_ID!=8
+Oct 12 15:21:01 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/home/templates/indexSuccess.php"
+Oct 12 15:21:01 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:21:01 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 12 15:21:01 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 12 15:21:01 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 12 15:21:01 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 12 15:21:01 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 12 15:21:01 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 12 15:21:01 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 12 15:21:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 12 15:21:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Configuration 3.21 ms (11)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Factories 67.15 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Action "home/index" 52.49 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 31.16 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 0.93 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 0.92 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 0.93 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 7.85 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 2.81 ms (1)
+Oct 12 15:21:01 symfony [info] {sfWebResponse} Send content (48582 o)
+Oct 15 09:26:44 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Oct 15 09:26:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 15 09:26:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 15 09:26:44 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Oct 15 09:26:44 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES UTF8;
+Oct 15 09:26:44 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT reservas.ID, reservas.SOCIO_ID, reservas.PELICULA_ID, reservas.FECHA_RESERVA, reservas.HORA_RESERVA, reservas.EXPIRO_RESERVA, reservas.ALQUILADA FROM `reservas` WHERE reservas.EXPIRO_RESERVA=0
+Oct 15 09:26:44 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SELECT pelicula.ID, pelicula.TITULO, pelicula.DURACION, pelicula.FECHA_ESTRENO, pelicula.ESTRENO, pelicula.ACTOR1_NOM, pelicula.ACTOR1_APELL, pelicula.ACTOR2_NOM, pelicula.ACTOR2_APELL, pelicula.CATEGORIA_ID, pelicula.ESTADO, pelicula.SINOPSIS, pelicula.IMAGEN FROM `pelicula` WHERE pelicula.ESTRENO=1 AND pelicula.CATEGORIA_ID!=8
+Oct 15 09:26:44 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/home/templates/indexSuccess.php"
+Oct 15 09:26:44 symfony [info] {sfPHPView} Decorate content with "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 15 09:26:44 symfony [info] {sfPHPView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/layout.php"
+Oct 15 09:26:44 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_css_assets.php"
+Oct 15 09:26:44 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/plugins/mpProjectPlugin/modules/default/templates/_mpProjectPlugin_js_assets.php"
+Oct 15 09:26:44 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/templates/_estado.php"
+Oct 15 09:26:44 symfony [info] {main} Call "pelicula->executeObtCategorias()"
+Oct 15 09:26:44 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT categoria.ID, categoria.TIPO FROM `categoria`
+Oct 15 09:26:44 symfony [info] {sfPartialView} Render "/home/javier/2012_pw2_tp2/apps/frontend/modules/pelicula/templates/_obtCategorias.php"
+Oct 15 09:26:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 15 09:26:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Configuration 5.11 ms (11)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Factories 267.22 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Action "home/index" 246.21 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 126.69 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_css_assets" 8.34 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Partial "default/_mpProjectPlugin_js_assets" 1.96 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Partial "global/_estado" 8.48 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Component "pelicula/obtCategorias" 23.69 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebDebugLogger} Partial "pelicula/_obtCategorias" 8.26 ms (1)
+Oct 15 09:26:44 symfony [info] {sfWebResponse} Send content (48166 o)

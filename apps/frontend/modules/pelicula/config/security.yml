@@ -1,0 +1,29 @@
+alquiladas:
+  is_secure:  on
+  credentials: [[ 1, 2 ]]
+
+index:
+  is_secure:  on
+  credentials: [[ 1, 2 ]]
+
+new:
+  is_secure:  on
+  credentials: [[ 1, 2 ]]
+
+edit:
+  is_secure:  on
+  credentials: [[ 1, 2 ]]
+
+devolverPeliculas:
+  is_secure: on
+  credentials: [[1, 2]]
+
+modificarEstrenos:
+  is_secure:  on
+  credentials: [[ 1, 2 ]]
+
+segunEstados:
+  is_secure:  on
+  credentials: [[ 1, 2 ]]
+
+
