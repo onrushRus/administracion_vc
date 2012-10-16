@@ -41,7 +41,7 @@
       <!--Comienza imagen cabezera-->
       <div class="row">
         <div class="span4 offset4">
-          <img src="<?php echo image_path('logo3.png')?>" alt=""></img>
+          <img src="<?php echo image_path('logo.png')?>" alt=""></img>
         </div>
         <div class="span2 offset1 pull-left">
           <?php include_partial("global/estado");?>
@@ -97,9 +97,8 @@
           <div class="span4 offset3">
             <hr/>
               <footer>                
-                  <p>Dvd Club Company</p>
-                  <p>Rivas, Raúl - Gosaine, Javier - Fernández, Nicolás</p>
-                  <p>&copy; Company 2012</p>
+                  <p>Gosaine, Javier</p>
+                  <p>&copy; Administración VideoClubs Company - 2012</p>
               </footer>
           </div>
       </div>
